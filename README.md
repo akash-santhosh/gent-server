@@ -1,7 +1,8 @@
 GraphQL Server Application
 ========================================
 
-GraphQL Server Node JS, Typescript, GraphQL Yoga. 
+GraphQL Server, Express, Node JS, Typescript, GraphQL Yoga.
+GENT - Server 
 
 Installation Instructions
 --------------------------
@@ -13,3 +14,7 @@ Usage:
 ------
 
  * To start the application server: `rm -rf dist && grunt serve`
+
+
+Oct-13-2019
+
