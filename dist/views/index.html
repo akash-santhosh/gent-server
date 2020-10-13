@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    <%= title %>
+  </title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="banner">
+    <img height="800px" src="/images/openhack.jpeg" alt="Dev Conf" />
+    <br>
+    <h2>
+      <%= message %>
+    </h2>
+    <div class="resources">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>URL</th>
+        </tr>
+        <tr>
+          <td>Playground</td>
+          <td><a href="/playground">/playground</a></td>
+        </tr>
+        <tr>
+          <td>GraphQL</td>
+          <td><a href="/graphql">/graphql</a></td>
+        </tr>
+        <tr>
+          <td>Subscriptions</td>
+          <td><a href="/subscriptions">/subscriptions</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

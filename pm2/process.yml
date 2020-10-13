@@ -1,0 +1,18 @@
+apps:
+  - script   : ./bin/www
+    instances: 4
+    exec_mode: cluster
+    name: "graphql-server"
+    env_production:
+      NODE_ENV: production
+    env_stage:
+      NODE_ENV: stage
+    env_qa:
+      NODE_ENV: qa
+    env_dev:
+      NODE_ENV: dev
+    log_date_format: "YYYY-MM-DD HH:mm:ss Z"
+    log_file: "/home/rigin/logs/pm2.log"
+    error_file: "/home/rigin/logs/error.log"
+    out_file: "/home/rigin/logs/out.log"
+    merge_logs: true

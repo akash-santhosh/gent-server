@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+"use strict";
+
+// module dependencies
+const server = require("../dist/server");
+const debug = require("debug")("express:server");
+const https = require("https");
+const fs = require("fs");
+const os = require("os");
+const PORT = normalizePort(process.env.PORT || 8000);
+const options = {
+  port: PORT,
+  endpoint: "/graphql",
+  subscriptions: "/subscriptions",
+  playground: "/playground",
+  tracing: true,
+};
+// create https server
+const app = server.Server.bootstrap().app;
+app.start(options).then( () => {
+  console.log(`Server Running at ${os.hostname} in PORT - ${PORT}`);
+});
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+function normalizePort(val) {
+  const port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
